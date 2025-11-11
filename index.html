@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Screensaver creator by HTP AMERICA</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+
+
+
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper" class="divided">
+
+		<!-- One -->
+		<section class="wrapper style1 align-center">
+			<div class="content">
+				<br>
+				<h1>Screensaver creator</h1>
+				<p class="major"> Here you can upload your image, adjust it to fit the screen resolution, and download
+					the converted file, ready to be uploaded to your machine.
+				</p>
+			</div>
+		</section>
+		<section class="wrapper style1 align-center">
+			<div class="content">
+				<br>
+				<p class="major">
+					<input type="file" id="fileInput" accept="image/*">
+				</p>
+				<p class="minor">
+					<label for="scaleSlider">Zoom:</label>
+					<input type="range" id="scaleSlider" min="0.1" max="3" step="0.1" value="1"
+						oninput="updateCanvas()">
+					<br>
+					<label for="bgColorPicker" position="right">Background color:</label>
+					<input type="color" id="bgColorPicker" value="#000000" oninput="updateCanvas()">
+				</p>
+
+			</div>
+		</section>
+
+		<section class="wrapper style1 align-center  color2">
+			<div class="content">
+				<br>
+				<h4>Use the mouse to drag and center your image</h4>
+
+				<canvas id="previewCanvas" width="800" height="480"></canvas>
+
+				<ul class="align-center">
+					<button id="downloadButton" onclick="convertToRGB565()"
+						class="button icon solid fa-download">Download
+						file</button>
+				</ul>
+				<br>
+			</div>
+		</section>
+
+		<section
+			class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in color3">
+			<div class="content" style="color: #ffffff;">
+				<p class="major">
+				<h2 style="color: #ffffff; ">How to use</h2>
+				<ol>
+					<li>Download the converted file ".sif"</li>
+					<li>Get an USB stick, refer to the notes below to choose the correct flash drive</li>
+					<li>Copy the “screensaver.sif” file in the USB stick, in the root, not inside a folder. There must
+						be only one “.sif” file in this place an no software update file (".suf"). The USB stick can
+						contain any other types of files/folder and even others .suf file, but they have to be placed
+						inside a folder not in the main path</li>
+					<li>Insert the USB stick on the machine</li>
+					<li>With the machine turned on, navigate to the "Information screen" and press "Update"</li>
+					<li>The machine will start the process and will show eventual error messages. Do not disconnect the
+						USB while leds near the port are on!</li>
+					<li>After the "success" message, you can enjoy your custom screensaver!</li>
+				</ol>
+				</p>
+				<p class="minor">
+				<h4 style="color: #ffffff; ">USB Drive specifications</h4>
+				<h5 style="color: #ffffff; ">
+					The USB supports FAT and exFAT file systems but is limited to the MBR
+					partition standard. As a result, some "large" USB sticks (e.g., 128GB, 256GB)
+					may not work if they use the GPT partition standard. Large USB mass storage requiring more than
+					150mA may not work properly.
+				</h5>
+				</p>
+			</div>
+			<!--
+			<div class="image">
+				<img src="images/pic01.jpg" alt="" />
+			</div>
+			-->
+		</section>
+
+		<!-- Footer -->
+		<footer class="wrapper style1 align-center">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="https://www.youtube.com/user/usaweld" class="icon brands style2 fa-youtube"><span
+								class="label">Youtube</span></a></li>
+					<li><a href="https://www.facebook.com/HTPAmerica.USAWeld/"
+							class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.instagram.com/htpamerica_usaweld/"
+							class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+				</ul>
+				<p>&copy; Screensaver creator, HTP AMERICA : <a href="https://usaweld.com/">usaweld.com</a>.
+				<h5>Template by <a href="https://html5up.net">HTML5 UP</a></h5>
+				</p>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/stel.js"></script>
+
+</body>
+
+</html>
