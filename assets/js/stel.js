@@ -121,3 +121,10 @@
 			document.body.removeChild(a);
 			URL.revokeObjectURL(url);
 		}
+
+		function downloadDefaultFile() {
+    const link = document.createElement('a');
+    link.href = './images/default.sif';   // percorso relativo del file
+    link.download = 'default.sif';      // nome con cui scaricarlo
+    link.click();
+}
